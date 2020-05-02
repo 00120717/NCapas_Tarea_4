@@ -18,7 +18,7 @@ public class Producto {
 	@Size(min=1,max=500,message = "El campo Descripcion debe tener de 1 a 500 caracteres")
 	String descripcion;
 	String existencia;
-	//@Pattern(regexp = "([0-9]{2})/([0-9]{2})/([0-9]{4})",message = "El campo fecha debe ser en formato dd/mm/yy")
+	@Pattern(regexp = "^([0-2][0-9]|3[0-1])(\\/)(0[1-9]|1[0-2])(\\/)(\\d{4})$",message = "El campo fecha debe ser en formato dd/mm/yyyy")
 	String fechaIngreso;
 	
 	public String getCodigo() {
